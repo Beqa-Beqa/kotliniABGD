@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/profile_shape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/profile_shape"
+        android:width="120dp"
+        android:height="120dp"
+        app:layout_constraintBottom_toTopOf="@+id/greetings"
+        app:layout_constraintStart_toStartOf="@+id/greetings"
+        app:layout_constraintEnd_toEndOf="@+id/greetings"
+        android:layout_marginBottom="20dp"
+        />
+
+    <TextView
+        android:id="@+id/greetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, name"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="220dp"
+        />
+
+    <EditText
+        android:id="@+id/name_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/greetings"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/black"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:hint="enter your name here"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/okay_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Okay"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/name_editText"
+        app:layout_constraintStart_toStartOf="@+id/name_editText"
+        app:layout_constraintEnd_toEndOf="@id/name_editText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="next"
+        android:textColor="@color/white"
+        android:background="@drawable/button_shape"
+        app:layout_constraintTop_toBottomOf="@+id/okay_button"
+        app:layout_constraintStart_toStartOf="@id/okay_button"
+        app:layout_constraintEnd_toEndOf="@id/okay_button"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
